@@ -1,0 +1,297 @@
+/*!----RESET----*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*!------ HEADER-------*/
+header{
+    
+    background-color:rgb(0, 0, 0);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header h1{
+    font-size: 60px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* font-style: ; */
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    
+}
+
+header h1 span{
+    color: rgb(125, 14, 14);
+}
+
+header nav{
+    width: 50%;
+}
+
+header nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+header nav ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255)
+}
+
+header nav ul li a:hover{
+    color: rgb(125, 14, 14);
+}
+
+/*!------ MAIN-------*/
+
+.hero{
+    width: 100%;
+    height: 500px;
+    text-align:center;
+    color: white;
+    background-image: url("../img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.hero h2{
+    font-size: 60px;
+}
+
+.hero p{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.hero a{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.hero a:hover{
+    background-color: rgb(125, 14, 14);
+}
+
+.bienvenidos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.bienvenidos div{
+    width: 50%;
+    margin: 20px;
+}
+
+.bienvenidos div h2{
+    font-size: 50px;
+}
+
+.bienvenidos div p{
+    font-size: 20px;
+    width: 80%;
+}
+
+.bienvenidos img{
+    width: 400px;
+    height: 600px;
+}
+
+.productos .card-contenedor{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.productos h2{
+    text-align: center;
+    background-color: black;
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+}
+
+.productos .card-contenedor div{
+    width: 250px;
+    height: 370px;
+    border: 1px black solid;
+    text-align: center;
+    margin: 20px;
+    /* display: inline-block; */
+    transition: 1s;
+    box-shadow: 10px 9px 55px -12px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 9px 55px -12px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 9px 55px -12px rgba(0,0,0,0.75);
+}
+
+
+.productos div img{
+    width: 100%;
+    height: 270px;
+}
+
+.productos div h3{
+    margin: 15px;
+}
+
+.productos div a{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    transition: 1s;
+    text-decoration: none;
+}
+
+.productos div a:hover{
+    background-color: rgb(125, 14, 14);
+}
+
+.grid-galeria{
+    width: 100%;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+    gap: 15px;
+}
+
+.grid-galeria div{
+    position: relative;
+}
+
+.grid-galeria div h3{
+    position: absolute;
+    bottom: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.557);
+    width: 100%;
+    padding: 10px;
+}
+
+.grid-galeria div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 10px 9px 55px -12px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 9px 55px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 9px 55px -12px rgba(0,0,0,0.75);
+}
+
+.img-4{
+    grid-column: span 2;
+}
+
+.img-6{
+    grid-row: span 2;
+}
+
+.img-8{
+    grid-row: span 2;
+}
+
+/*!------- FOOTER ------*/
+
+footer{
+    background-color: rgb(227, 225, 225);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+footer h2{
+    font-size: 50px;
+}
+
+footer div a img{
+    /*width = ancho*/
+    width:50px;
+    /*height = alto*/
+    height: 50px;
+}
+
+/*!------------ MEDIA QUERY ----------*/
+@media screen and (max-width:950px){
+    .bienvenidos{
+        flex-direction: column;
+    }
+    .bienvenidos div{
+        width: 80%;
+        text-align: center;
+    }
+    .bienvenidos div p{
+        width: 100%;
+    }
+    .bienvenidos img{
+        width: 70%;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width:900px){
+    .grid-galeria{
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 250px;
+    }
+    .grid-item{
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .img-9{
+        grid-column: span 2;
+    }
+}
+
+@media screen and (max-width:800px){
+    header{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:700px){
+    header nav ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:550px){
+    
+.hero h2{
+    font-size: 40px;
+}
+
+.hero p{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+}
+
+@media screen and (max-width:450px){
+    .grid-galeria{
+        grid-template-columns: 1fr;
+    }
+    .grid-item{
+        grid-column: span 1;
+    }
+}
